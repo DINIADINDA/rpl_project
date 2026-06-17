@@ -1,0 +1,16 @@
+{% extends 'mahasiswa/base.html' %}
+
+{% block content %}
+<div style="padding: 20px;">
+    <h2>{{ title }}</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <table cellpadding="5">
+            {{ form.as_table }}
+        </table>
+        <br>
+        <button type="submit" style="background-color: #007bff; color: white; border: none; padding: 5px 15px; cursor: pointer;">Simpan</button>
+        <a href="{% url 'daftar_buku' %}" style="margin-left: 10px;">Batal</a>
+    </form>
+</div>
+{% endblock %}

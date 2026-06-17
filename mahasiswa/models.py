@@ -8,3 +8,13 @@ class Mahasiswa(models.Model):
 
     def __str__(self):
         return f"{self.nim} - {self.nama}"
+
+
+class Buku(models.Model):
+    judul = models.CharField(max_length=200)
+    penulis = models.CharField(max_length=100)
+    penerbit = models.CharField(max_length=100)
+    tahun_terbit = models.IntegerField()
+
+    def __str__(self):
+        return f"{self.judul} - {self.penulis}"

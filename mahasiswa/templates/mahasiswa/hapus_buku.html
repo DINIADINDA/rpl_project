@@ -1,0 +1,14 @@
+{% extends 'mahasiswa/base.html' %}
+
+{% block content %}
+<div style="padding: 20px;">
+    <h2>Hapus Buku</h2>
+    <p>Apakah Anda yakin ingin menghapus buku <strong>"{{ exam.judul }}"</strong>?</p>
+    
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit" style="background-color: red; color: white; border: none; padding: 5px 15px; cursor: pointer;">Ya, Hapus</button>
+        <a href="{% url 'daftar_buku' %}" style="margin-left: 10px;">Batal</a>
+    </form>
+</div>
+{% endblock %}

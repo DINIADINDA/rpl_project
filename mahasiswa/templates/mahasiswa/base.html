@@ -21,6 +21,12 @@
         {% else %}
             | <a href="/accounts/login/">Login</a>
         {% endif %}
+
+        <div style="background-color: #1565C0; padding: 10px; color: white;">
+    <a href="{% url 'daftar_mahasiswa' %}" style="color: white; text-decoration: none;">Data Mahasiswa</a> | 
+    <a href="{% url 'daftar_buku' %}" style="color: white; text-decoration: none;">Data Buku</a> | 
+    <a href="{% url 'logout' %}" style="color: white; text-decoration: none;">Logout</a>
+</div>
     </nav>
 
 </header>
